@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		846D5DA7260877A5005E922A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D5DA6260877A5005E922A /* AppDelegate.swift */; };
 		846D5DA9260877A5005E922A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D5DA8260877A5005E922A /* SceneDelegate.swift */; };
-		846D5DAB260877A5005E922A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D5DAA260877A5005E922A /* ViewController.swift */; };
-		846D5DAE260877A5005E922A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846D5DAC260877A5005E922A /* Main.storyboard */; };
 		846D5DB0260877A7005E922A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846D5DAF260877A7005E922A /* Assets.xcassets */; };
 		846D5DB3260877A7005E922A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846D5DB1260877A7005E922A /* LaunchScreen.storyboard */; };
+		846D5DC326087801005E922A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D5DC226087801005E922A /* HomeViewController.swift */; };
+		846D5DC72608780C005E922A /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846D5DC62608780C005E922A /* HomeView.storyboard */; };
+		84A234D82609D9A900983510 /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A234D72609D9A900983510 /* UITapGestureRecognizerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		846D5DA3260877A5005E922A /* W2-Project2-Gumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "W2-Project2-Gumi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		846D5DA6260877A5005E922A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846D5DA8260877A5005E922A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		846D5DAA260877A5005E922A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		846D5DAD260877A5005E922A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		846D5DAF260877A7005E922A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846D5DB2260877A7005E922A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		846D5DB4260877A7005E922A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846D5DC226087801005E922A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		846D5DC62608780C005E922A /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
+		84A234D72609D9A900983510 /* UITapGestureRecognizerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITapGestureRecognizerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,64 @@
 		846D5DA5260877A5005E922A /* W2-Project2-Gumi */ = {
 			isa = PBXGroup;
 			children = (
+				846D5DC0260877E4005E922A /* UI */,
+				846D5DBF260877DD005E922A /* Extentsion */,
+				846D5DBE260877D7005E922A /* API */,
+				846D5DBD260877D0005E922A /* Resource */,
+				846D5DBC260877CA005E922A /* Data */,
 				846D5DA6260877A5005E922A /* AppDelegate.swift */,
 				846D5DA8260877A5005E922A /* SceneDelegate.swift */,
-				846D5DAA260877A5005E922A /* ViewController.swift */,
-				846D5DAC260877A5005E922A /* Main.storyboard */,
 				846D5DAF260877A7005E922A /* Assets.xcassets */,
 				846D5DB1260877A7005E922A /* LaunchScreen.storyboard */,
 				846D5DB4260877A7005E922A /* Info.plist */,
 			);
 			path = "W2-Project2-Gumi";
+			sourceTree = "<group>";
+		};
+		846D5DBC260877CA005E922A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		846D5DBD260877D0005E922A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		846D5DBE260877D7005E922A /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		846D5DBF260877DD005E922A /* Extentsion */ = {
+			isa = PBXGroup;
+			children = (
+				84A234D72609D9A900983510 /* UITapGestureRecognizerExtension.swift */,
+			);
+			path = Extentsion;
+			sourceTree = "<group>";
+		};
+		846D5DC0260877E4005E922A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				846D5DC1260877EC005E922A /* HomeView */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		846D5DC1260877EC005E922A /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				846D5DC226087801005E922A /* HomeViewController.swift */,
+				846D5DC62608780C005E922A /* HomeView.storyboard */,
+			);
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +175,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846D5DC72608780C005E922A /* HomeView.storyboard in Resources */,
 				846D5DB3260877A7005E922A /* LaunchScreen.storyboard in Resources */,
 				846D5DB0260877A7005E922A /* Assets.xcassets in Resources */,
-				846D5DAE260877A5005E922A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +188,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846D5DAB260877A5005E922A /* ViewController.swift in Sources */,
 				846D5DA7260877A5005E922A /* AppDelegate.swift in Sources */,
 				846D5DA9260877A5005E922A /* SceneDelegate.swift in Sources */,
+				846D5DC326087801005E922A /* HomeViewController.swift in Sources */,
+				84A234D82609D9A900983510 /* UITapGestureRecognizerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		846D5DAC260877A5005E922A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				846D5DAD260877A5005E922A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		846D5DB1260877A7005E922A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

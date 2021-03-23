@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yuu-J8-WaC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="nC4-Nf-Fne">
+            <objects>
+                <viewController id="yuu-J8-WaC" customClass="HomeViewController" customModule="W2_Project2_Gumi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9UV-5e-87Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UgD-U5-xX9">
+                                <rect key="frame" x="10" y="54" width="394" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="WQo-wa-HCX"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum https://developer.apple.com/documentation/uikit/uilabel dolor sit er elit lamet, consectetaur https://developer.apple.com/documentation/uikit/uitextfielddelegate cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcN-Nf-o0D">
+                                <rect key="frame" x="20" y="812" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nzt-oX-1Wr"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveTapped:" destination="yuu-J8-WaC" eventType="touchUpInside" id="8Rj-GG-ms9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIE-q2-Tud">
+                                <rect key="frame" x="10" y="54" width="394" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f4X-5n-NBp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f4X-5n-NBp" firstAttribute="bottom" secondItem="dcN-Nf-o0D" secondAttribute="bottom" constant="10" id="1gN-pF-Lmq"/>
+                            <constraint firstItem="bIE-q2-Tud" firstAttribute="leading" secondItem="UgD-U5-xX9" secondAttribute="leading" id="2tY-HZ-EDz"/>
+                            <constraint firstItem="f4X-5n-NBp" firstAttribute="trailing" secondItem="UgD-U5-xX9" secondAttribute="trailing" constant="10" id="3oC-XG-N2S"/>
+                            <constraint firstItem="bIE-q2-Tud" firstAttribute="top" secondItem="UgD-U5-xX9" secondAttribute="top" id="eKe-7Z-LiZ"/>
+                            <constraint firstItem="f4X-5n-NBp" firstAttribute="trailing" secondItem="dcN-Nf-o0D" secondAttribute="trailing" constant="20" id="jOB-bL-srO"/>
+                            <constraint firstItem="UgD-U5-xX9" firstAttribute="leading" secondItem="f4X-5n-NBp" secondAttribute="leading" constant="10" id="ujZ-Mb-ubt"/>
+                            <constraint firstItem="UgD-U5-xX9" firstAttribute="top" secondItem="f4X-5n-NBp" secondAttribute="top" constant="10" id="wYD-SS-iXz"/>
+                            <constraint firstItem="bIE-q2-Tud" firstAttribute="trailing" secondItem="UgD-U5-xX9" secondAttribute="trailing" id="whg-cK-vOR"/>
+                            <constraint firstItem="dcN-Nf-o0D" firstAttribute="leading" secondItem="f4X-5n-NBp" secondAttribute="leading" constant="20" id="zc1-nr-Nrn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="bIE-q2-Tud" id="4LE-dR-qsf"/>
+                        <outlet property="saveButton" destination="dcN-Nf-o0D" id="3sF-Hq-L56"/>
+                        <outlet property="textView" destination="UgD-U5-xX9" id="xZm-pJ-rri"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NU7-tg-CG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.579710144927539" y="66.964285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
