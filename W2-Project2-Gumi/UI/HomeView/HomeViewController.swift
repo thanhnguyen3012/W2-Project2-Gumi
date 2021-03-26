@@ -21,26 +21,18 @@ class HomeViewController: UIViewController {
     
     func setupUI() {
         textView.delegate = self
-        
+        textView.sizeToFit()
         textView.isEditable = true
-        label.isHidden = true
+        textView.isScrollEnabled = false
         
+        label.isHidden = true
         label.isUserInteractionEnabled = true
+        label.backgroundColor = .systemBackground
     }
     
     @IBAction func saveTapped(_ sender: Any) {
         print("Button tapped.")
         convertTextViewToLabel()
-    }
-    
-    @objc func userDidTapLabel(tapGestureRecognizer: UITapGestureRecognizer) {
-        print("Label tapped.")
-        label.isHidden = true
-        
-        self.textViewDidBeginEditing(textView)
-        textView.isHidden = false
-        
-        saveButton.isEnabled = true
     }
     
     func convertTextViewToLabel() {
@@ -58,6 +50,7 @@ class HomeViewController: UIViewController {
         label.isHidden = false
     }
     
+    /// Change color for links in label
     func detectURLInlabel() {
         let text = textView.text!
         
@@ -68,13 +61,15 @@ class HomeViewController: UIViewController {
         label.textColor =  UIColor.black
         
         for link in links {
-            linkAttributedString.addAttribute(.link, value: String(""), range: link.range)
+            linkAttributedString.addAttribute(.link, value: "google.com", range: link.range)
         }
         label.attributedText = linkAttributedString
         label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapLabel(recognizer:))))
     }
     
+    /// Open Safari from a link
     func goToWebsite(url : String){
+        print("Link tapped.")
         if let websiteUrl = URL(string: url){
             if #available(iOS 10, *) {
                 UIApplication.shared.open(websiteUrl, options: [:], completionHandler: {
@@ -94,13 +89,23 @@ class HomeViewController: UIViewController {
         let links = detector.matches(in: text, options: [], range: NSRange(location: 0, length: text.utf16.count))
         
         for link in links{
+//            print("Link.range: \(link.range)")
             if recognizer.didTapAttributedTextInLabel(label: label, inRange: link.range) {
                 goToWebsite(url: String(text[Range(link.range, in: text)!]))
                 return
             }
         }
         
-        label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(userDidTapLabel(tapGestureRecognizer:))))
+        labelTapped()
+    }
+    
+    /// User did not tap any link in label, this function will hide the label and show them textview (for edit)
+    func labelTapped() {
+        print("Label tapped.")
+        label.isHidden = true
+        self.textViewDidBeginEditing(textView)
+        textView.isHidden = false
+        saveButton.isEnabled = true
     }
 }
 
@@ -121,6 +126,7 @@ extension HomeViewController: UITextViewDelegate {
     }
 
     func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        print("textViewShouldEndEditing")
         return true
     }
     
@@ -131,8 +137,6 @@ extension HomeViewController: UITextViewDelegate {
     
     // Interacting with Text Data
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
-        print(URL.absoluteString)
-        print(characterRange)
         return true
     }
 }
